@@ -32,7 +32,67 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.todo__list__wrapper {
+  width: 600px;
+  min-height: 380px;
+  padding: 1rem;
+  margin: 0 auto;
+  margin-top: 3rem;
+  border-radius: 8px;
+  border: 1px solid #c1c1c1;
+}
+
+.heading {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.add__input__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.input__wrapper {
+  width: 100%;
+}
+
+.input__wrapper input {
+  width: calc(100% - 36px);
+  height: 36px;
+  padding: 0rem 0.56rem;
+  border: 1px solid #c1c1c1;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.input__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  background-color: #7ed6df;
+}
+
+.input__button:hover {
+  cursor: pointer;
+}
+
+.list__item__wrapper ul {
+  display: flex;
+  align-items: flex-start;
 }
