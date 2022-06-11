@@ -95,4 +95,6 @@
 .list__item__wrapper ul {
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
+  list-style: none;
 }

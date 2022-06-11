@@ -1,16 +1,22 @@
-import React, { useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 
 const TodoList = () => {
     const [addItem, setAddItem] = useState("");
-    let toDoList = [];
+    const [arrayData, setArrayData] = useState([]);
 
     const handleChange = (event) => {
         setAddItem(event.target.value);
     }
 
+    useEffect(() => {
+    }, [arrayData]);
+
     const handleSubmit = () => {
-        toDoList.push(addItem);
-        console.log(toDoList)
+        if (isNaN(addItem)) {
+            setArrayData([...arrayData, addItem]);
+        } else {
+            alert("Numbers are not allowed")
+        }
     }
 
     return (
@@ -26,8 +32,12 @@ const TodoList = () => {
 
                 <div className="list__item__wrapper">
                     <ul>
-                        {toDoList.map((item) => {
-                            <li> 1. {item}</li>
+                        {arrayData.map((item, index) => {
+                            return (
+                                <Fragment key={index}>
+                                    <li> {index + 1} {item}</li>
+                                </Fragment>
+                            )
                         })}
                     </ul>
                 </div>
