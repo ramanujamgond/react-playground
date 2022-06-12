@@ -14,6 +14,7 @@ const TodoList = () => {
     const handleSubmit = () => {
         if (isNaN(addItem)) {
             setArrayData([...arrayData, addItem]);
+            setAddItem("");
         } else {
             alert("Numbers are not allowed")
         }
@@ -25,7 +26,7 @@ const TodoList = () => {
                 <div className="heading">List Creator</div>
                 <div className="add__input__box">
                     <div className="input__wrapper">
-                        <input placeholder="Enter item names" onChange={handleChange} />
+                        <input placeholder="Enter item names" value={addItem} onChange={handleChange} />
                     </div>
                     <div className="input__button" onClick={handleSubmit}>+</div>
                 </div>
