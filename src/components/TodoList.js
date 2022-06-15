@@ -20,6 +20,12 @@ const TodoList = () => {
         }
     }
 
+    const deleteItem = (e) => {
+        const name = e.target.getAttribute("name")
+        setArrayData(arrayData.filter(item => item.item !== item))
+        console.log(item)
+    }
+
     return (
         <>
             <div className="todo__list__wrapper">
@@ -36,7 +42,10 @@ const TodoList = () => {
                         {arrayData.map((item, index) => {
                             return (
                                 <Fragment key={index}>
-                                    <li> {index + 1} {item}</li>
+                                    <span className="item__list__wrapper mt-3">
+                                        <li> {index + 1} {item}</li>
+                                        <span><i className='bi bi-trash me-2' onClick={deleteItem}></i></span>
+                                    </span>
                                 </Fragment>
                             )
                         })}

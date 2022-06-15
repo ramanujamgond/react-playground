@@ -99,3 +99,15 @@
   list-style: none;
   padding-left: 1.54rem;
 }
+
+.item__list__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.item__list__wrapper span i:hover {
+  color: red;
+  cursor: pointer;
+}
